@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<!-- Leaflet CSS and JS -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+			crossorigin=""
+		/>
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+		<script
+			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+			crossorigin=""
+		></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Local-Quest - Projekt Thomas Balke</title>
+	</head>
+	<body>
+		<div class="site-wrapper">
+			<header class="site-header content-padding">
+				<h1 class="h6 siteheading">Local-Quest - Digitale Schnitzeljagd</h1>
+			</header>
+
+			<main id="root" class="site-content content-padding"></main>
+			<footer class="site-footer content-padding">© Thomas Balke 2025</footer>
+		</div>
+		<script type="module" src="/src/main.jsx"></script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+.interactivemap {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+
+	.interactivemap__map {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+
+	.interactivemap__sidebar {
+		flex: 0 0 440px;
+		max-width: 33%;
+		max-block-size: calc(85vh - calc(var(--content-padding) * 2));
+		overflow: auto;
+		padding-inline-end: 1rem;
+	}
+
+	/* Responsive */
+	@media (width <= 800px) {
+		display: block;
+
+		.interactivemap__sidebar {
+			width: 100%;
+			max-width: none;
+			position: static;
+			height: auto;
+			border-left: none;
+			margin-top: 1rem;
+			max-block-size: initial;
+			overflow: visible;
+		}
+	}
+
+	/*Set Zindex for Confetti*/
+	.usermap {
+		z-index: 0;
+		position: relative;
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"formatter": {
+		"enabled": false
+	},
+	"linter": {
+		"domains": {
+			"project": "recommended",
+			"react": "recommended"
+		},
+		"rules": {
+			"correctness": {
+				"noUndeclaredVariables": "error"
+			},
+			"suspicious": {
+				"noVar": "error"
+			},
+			"style": {
+				"useShorthandAssign": "error",
+				"useConsistentObjectDefinitions": "on"
+			},
+			"security": {
+				"noDangerouslySetInnerHtml": "warn"
+			}
+		}
+	},
+	"files": {
+		"includes": ["**/*.{js,jsx,ts,tsx,cjs,mjs,css}", "!**/dist"]
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	}
+}

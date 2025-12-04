@@ -1,0 +1,8 @@
+.map,
+.usermap {
+	height: 40vh;
+}
+
+.leaflet-container {
+	height: 100%;
+}

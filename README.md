@@ -50,4 +50,4 @@ npm run dev
 
 **Styling**
 
-- Styles liegen in `css/`. Komponenten-spezifische Regeln sind under `css/components/`.
+- Styles liegen in `css/`. Komponenten-spezifische Regeln sind unter `css/components/`.

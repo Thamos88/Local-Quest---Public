@@ -12,7 +12,8 @@
 		flex: 0 0 440px;
 		max-width: 33%;
 		max-block-size: calc(85vh - calc(var(--content-padding) * 2));
-		overflow: auto;
+		overflow-y: auto;
+		overflow-x: hidden;
 		padding-inline-end: 1rem;
 	}
 

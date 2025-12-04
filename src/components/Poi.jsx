@@ -66,7 +66,6 @@ export default function Poi(poi) {
 					className="poiitem__togglebtn"
 					aria-expanded={isOpen}
 					aria-controls={detailsId}
-					onClick={toggleOpen}
 					aria-label={isOpen ? 'Details ausblenden' : 'Details anzeigen'}
 				/>
 			</div>

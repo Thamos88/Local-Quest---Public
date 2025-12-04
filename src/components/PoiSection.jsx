@@ -31,6 +31,7 @@ export default function PoiSection() {
 							animate={{ height: 'auto', opacity: 1 }}
 							exit={{ height: 0, opacity: 0 }}
 							transition={{ duration: 0.1 }}
+							style={{ inlineSize: '100%' }}
 						>
 							<button
 								type="button"
@@ -39,7 +40,6 @@ export default function PoiSection() {
 							>
 								Aktualisieren
 							</button>
-							<br />
 							<label className="poisection__auto">
 								<input
 									type="checkbox"

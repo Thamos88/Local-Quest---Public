@@ -80,6 +80,13 @@ export default function Poi(poi) {
 						exit={{ height: 0, opacity: 0 }}
 						transition={{ duration: 0.25 }}
 					>
+						{/* 	<button
+							type="button"
+							className="poiitem__routebtn"
+							onClick={() => {}}
+						>
+							Route anzeigen
+						</button> */}
 						{poi.thumbnail && (
 							<div className="poiitem__thumbnail">
 								<img

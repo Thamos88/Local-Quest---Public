@@ -48,6 +48,11 @@ npm run dev
 - Quizdaten: `src/quizData.js` enthält die Quizfragen/Antworten.
 - Zustand: `zustand` wird als Store-Lösung verwendet (`zustandQuizStore.js`, `zustandPoiStore.js`, `zustandLocationStore.js`).
 
+**Steuerung**
+
+- Die Position kann über WASD oder die Pfeiltasten geändert werden. 
+
+
 **Styling**
 
 - Styles liegen in `css/`. Komponenten-spezifische Regeln sind unter `css/components/`.

@@ -91,33 +91,38 @@ export default function Pois({ refreshToken = 0, autoUpdate = false }) {
 async function fetchPOIs(poiStoreActions, lat, lon, radius = 5000, limit = 10) {
 	const endpoint = 'https://de.wikipedia.org/w/api.php';
 
-	const data = await upfetch(endpoint, {
-		method: 'GET',
-		params: {
-			action: 'query',
-			format: 'json',
-			origin: '*',
-			generator: 'geosearch',
-			ggscoord: `${lat}|${lon}`,
-			ggsradius: radius,
-			ggslimit: limit,
-			prop: 'pageimages|extracts|coordinates|info',
-			pithumbsize: 200,
-			exintro: 1,
-			explaintext: 1,
-			inprop: 'url',
-		},
-	});
+	try {
+		const data = await upfetch(endpoint, {
+			method: 'GET',
+			params: {
+				action: 'query',
+				format: 'json',
+				origin: '*',
+				generator: 'geosearch',
+				ggscoord: `${lat}|${lon}`,
+				ggsradius: radius,
+				ggslimit: limit,
+				prop: 'pageimages|extracts|coordinates|info',
+				pithumbsize: 200,
+				exintro: 1,
+				explaintext: 1,
+				inprop: 'url',
+			},
+		});
 
-	const pages = data?.query?.pages ?? {};
+		const pages = data?.query?.pages ?? {};
 
-	if (pages) {
-		poiStoreActions.setPois(pages);
+		if (pages) {
+			poiStoreActions.setPois(pages);
+		}
+
+		/* ToDo: Sortierung nach Entfernung */
+
+		return pages;
+	} catch (error) {
+		console.error('Error fetching POIs:', error);
+		return {};
 	}
-
-	/* ToDo: Sortierung nach Entfernung */
-
-	return pages;
 }
 
 /* https://support.garmin.com/en-US/?faq=hRMBoCTy5a7HqVkxukhHd8 
